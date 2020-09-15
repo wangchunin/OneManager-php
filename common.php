@@ -401,7 +401,8 @@ function main($path)
                 $domainforproxy = '';
                 $domainforproxy = getConfig('domainforproxy');
                 if ($domainforproxy!='') {
-                    $url = proxy_replace_domain($url, $domainforproxy);
+                    //$url = proxy_replace_domain($url, $domainforproxy);
+		    $url = $url;
                 }
                 if ( strtolower(splitlast($files['name'],'.')[1])=='html' ) return output($files['content']['body'], $files['content']['stat']);
                 else {
