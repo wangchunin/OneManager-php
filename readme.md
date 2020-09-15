@@ -1,3 +1,8 @@
+# ********************************
+# forked from qkqpttgf/OneManager-php
+只是去掉了反代加?Origindomain=
+# ********************************
+
 Install program first, then add onedrive in setup after login.  
 先安装程序，登录后在设置中添加onedrive。  
 
