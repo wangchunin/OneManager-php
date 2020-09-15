@@ -401,7 +401,8 @@ function main($path)
                 $domainforproxy = '';
                 $domainforproxy = getConfig('domainforproxy');
                 if ($domainforproxy!='') {
-                    $url = proxy_replace_domain($url, $domainforproxy);
+                    //$url = proxy_replace_domain($url, $domainforproxy);
+		    $url = $url;
                 }
                 if ( strtolower(splitlast($files['name'],'.')[1])=='html' ) return output($files['content']['body'], $files['content']['stat']);
                 else {
@@ -440,7 +441,7 @@ function proxy_replace_domain($url, $domainforproxy)
     else $aim = $http . '//' . $domainforproxy;
     if (substr($aim, -1)=='/') $aim = substr($aim, 0, -1);
     //return $aim . '/' . $uri . '&Origindomain=' . $domain;
-    echo "<script>alert($aim . '/' . $uri)</script>";
+    //echo "<script>alert($aim . '/' . $uri)</script>";
     return $aim . '/' . $uri;
     //$url = str_replace($tmp, $domainforproxy, $url).'&Origindomain='.$tmp;
 }
