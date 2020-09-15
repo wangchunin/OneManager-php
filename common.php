@@ -440,6 +440,7 @@ function proxy_replace_domain($url, $domainforproxy)
     else $aim = $http . '//' . $domainforproxy;
     if (substr($aim, -1)=='/') $aim = substr($aim, 0, -1);
     //return $aim . '/' . $uri . '&Origindomain=' . $domain;
+    echo "<script>alert($aim . '/' . $uri)</script>";
     return $aim . '/' . $uri;
     //$url = str_replace($tmp, $domainforproxy, $url).'&Origindomain='.$tmp;
 }
